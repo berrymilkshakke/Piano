@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Piano</title>
+    <style>
+       .body {
+           background-color: grey;
+       }
+       .container {
+           width: 272px;
+           margin-top: calc(50vh - 100px);
+           margin-left: auto;
+           margin-right: auto;
+           position: relative;
+       }
+       .white-keys{
+           text-align: center;
+       }
+       .white-keys kbd {
+           display: inline-block;
+           width: 40px;
+           height: 200px;
+           background-color: white;
+           border: 3px solid black;
+           margin-left: -.36em;
+           padding-top: 150px;
+           box-sizing: border-box;
+       }
+       .black-keys{
+           text-align: center;
+       }
+       .black-keys kbd {
+           position: absolute;
+           top: 0;
+           width: 20px;
+           height: 100px;
+           background-color: black;
+           color: white;
+           box-sizing: border-box;
+       }
+       .black-keys kbd:nth-of-type(1) {
+           left: 25px;
+       }
+       .black-keys kbd:nth-of-type(2) {
+           left: 65px;
+       }
+       .black-keys kbd:nth-of-type(3) {
+           left: 143px;
+       }
+       .black-keys kbd:nth-of-type(4) {
+           left: 183px;
+       }
+       .black-keys kbd:nth-of-type(5) {
+           left: 222px;
+       }
+       .black-keys kbd:nth-of-type(6) {
+           left: 250px;
+       }
+    </style>
+</head>
+<body class="body">
+<div class="container">
+    <div class="white-keys">
+        <kbd>A</kbd>
+        <kbd>S</kbd>
+        <kbd>D</kbd>
+        <kbd>F</kbd>
+        <kbd>G</kbd>
+        <kbd>H</kbd>
+        <kbd>J</kbd>
+    </div>
+    <div class="black-keys">
+        <kbd>W</kbd>
+        <kbd>E</kbd>
+        <kbd>T</kbd>
+        <kbd>Y</kbd>
+        <kbd>U</kbd>
+    </div>
+</div>
+<script>
+    let  audioA = new Audio("audio/A.mp3");
+    let  audioS = new Audio("audio/S.mp3");
+    let  audioD = new Audio("audio/D.mp3");
+    let  audioF = new Audio("audio/F.mp3");
+    let  audioG = new Audio("audio/G.mp3");
+    let  audioH = new Audio("audio/H.mp3");
+    let audioJ = new Audio("audio/G.mp3");
+    let audioW= new Audio("audio/W.mp3");
+    let audioE= new Audio("audio/E.mp3");
+    let audioT= new Audio("audio/T.mp3");
+    let audioY= new Audio("audio/Y.mp3");
+    let audioU= new Audio("audio/U.mp3");
+    document.addEventListener("keypress", function(event){
+        if(event.code === "KeyA"){
+audioA.play()}
+        else {console.log("Incorrect output.")}
+    });
+    document.addEventListener("keypress", function(event){
+        if(event.code === "KeyS"){
+        audioS.play()}
+        else {console.log("Incorrect output.")}
+    });
+    document.addEventListener("keypress", function(event){
+        if(event.code === "KeyD"){
+        audioD.play();}
+        else {console.log("Incorrect output.")}
+    });
+    document.addEventListener("keypress", function(event){
+        if(event.code === "KeyF"){
+        audioF.play();}
+        else {console.log("Incorrect output.")}
+    });
+    document.addEventListener("keypress", function(event){
+        if(event.code === "KeyG"){
+            audioG.play();
+        }
+        else {console.log("Incorrect output.")}
+    });
+    document.addEventListener("keypress", function(event){
+        if(event.code === "KeyH"){
+            audioH.play();
+        }
+        else {console.log("Incorrect output.")}
+    });
+    document.addEventListener("keypress", function(event){
+        if(event.code === "KeyJ"){
+            audioJ.play();
+        }
+        else {console.log("Incorrect output.")}
+    });
+    document.addEventListener("keypress", function(event){
+        if(event.code === "KeyW"){
+            audioW.play();
+        }
+        else {console.log("Incorrect output.")}
+    });
+    document.addEventListener("keypress", function(event) {
+        if (event.code === "KeyE") {
+            audioE.play();
+        } else {
+            console.log("Incorrect output.")
+        }
+    });
+        document.addEventListener("keypress", function(event) {
+            if (event.code === "KeyT") {
+                audioT.play();
+            } else {
+                console.log("Incorrect output.")
+            }
+        });
+    document.addEventListener("keypress", function(event) {
+        if (event.code === "KeyY") {
+            audioY.play();
+        } else {
+            console.log("Incorrect output.")
+        }
+    });
+    document.addEventListener("keypress", function(event) {
+        if (event.code === "KeyU") {
+            audioU.play();
+        } else {
+            console.log("Incorrect output.")
+        }
+    });
+
+</script>
+</body>
+</html>
